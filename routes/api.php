@@ -11,8 +11,8 @@ Route::post('/register', [RegisterController::class, 'post']);
 Route::get('/flights', [FlightsController::class, 'get']);
 Route::post('/flights', [FlightsController::class, 'post']);
 Route::get('/results', [ResultsController::class, 'get']);
-Route::delete('/results', [ResultsController::class, 'deleteFlight']);
-Route::delete('/results/player', [ResultsController::class, 'deletePlayer']);
+Route::post('/results/flight', [ResultsController::class, 'deleteFlight']);
+Route::post('/results/player', [ResultsController::class, 'deletePlayer']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
