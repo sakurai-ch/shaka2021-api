@@ -59,9 +59,15 @@ class Flight extends Model
         return $flights;
     }
 
-    public static function deleteFlights($flightId)
+    public static function deleteFlight($flightId)
     {
         Flight::where('id', $flightId)
+            ->delete();
+    }
+
+    public static function deleteFlights($playerId)
+    {
+        Flight::where('player_id', $playerId)
             ->delete();
     }
 

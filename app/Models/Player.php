@@ -78,6 +78,12 @@ class Player extends Model
         return $player;
     }
 
+    public static function deletePlayer($playerId)
+    {
+        Player::where('id', $playerId)
+            ->delete();
+    }
+
     protected $fillable = [
         'name',
         'has_xcp',
