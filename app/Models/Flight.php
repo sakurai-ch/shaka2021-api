@@ -24,11 +24,11 @@ class Flight extends Model
         
         $target_point = ( $request->target ? 10 : 0 );
 
-        $pylon1 = ( preg_match('/大/', $request->pylon) == 1 );
-        $pylon1_point = ($pylon1 ? 5 : 0);
+        $pylon1 = ( $request->pylon1 == '7' );
+        $pylon1_point = ($pylon1 ? 10 : 0);
 
-        $pylon2 = ( preg_match('/門/', $request->pylon) == 1 );
-        $pylon2_point = ($pylon2 ? 5 : 0);
+        $pylon2 = ( $request->pylon2 == '3' );
+        $pylon2_point = ($pylon2 ? 10 : 0);
 
         $createdFlight = Flight::create([
             'player_id' => $request->player_id,
